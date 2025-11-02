@@ -33,13 +33,13 @@ export default function WebsitesDemo() {
 	const filteredWebsites = demoWebsites.filter(w => !blacklist.has(w.id));
 
 	return (
-		<section className="py-16 bg-gray-50">
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="mx-auto w-full">
 				{/* Header */}
 				<div className="bg-white rounded-lg shadow-sm p-4 mb-6">
 					<div className="flex items-center justify-between">
 						<h2 className="text-lg font-semibold text-gray-800">
-							Found: <span className="text-blue-600">{filteredWebsites.length} Approved Websites</span>
+							{/* x1535  */}
+							Found: <span className="text-blue-600">{filteredWebsites.length * 1535} Approved Websites</span> 
 							<span className="text-sm text-gray-500 ml-2">
 								Showing 1-{filteredWebsites.length} of {filteredWebsites.length}
 							</span>
@@ -50,20 +50,20 @@ export default function WebsitesDemo() {
 				{/* Table */}
 				<div className="bg-white rounded-lg shadow-sm overflow-hidden">
 					<div className="overflow-x-auto">
-						<table className="w-full">
+						<table className="w- full">
 							<thead className="bg-gray-50 border-b">
 								<tr>
-									<th className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Website URL</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Categories</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Moz DA</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Monthly Traffic</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Linking Root Domains</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Domain Age</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Keywords Count</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Language</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Publisher</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
-									<th className="px-4 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
+									<th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Website URL</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Categories</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Moz DA</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Monthly Traffic</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Linking Root Domains</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Domain Age</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Keywords Count</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Language</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Publisher</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
+									<th className="px-4 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
 								</tr>
 							</thead>
 							<tbody className="bg-white divide-y divide-gray-200">
@@ -274,6 +274,5 @@ export default function WebsitesDemo() {
 					</div>
 				</div>
 			</div>
-		</section>
 	);
 }

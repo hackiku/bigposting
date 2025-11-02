@@ -39,7 +39,8 @@
 	}
 
 	body {
-		@apply bg-background text-foreground overflow-x-hidden filter invert;
+		@apply bg-background text-foreground overflow-x-hidden ;
+		/* filter invert */
 	}
 }
 

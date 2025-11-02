@@ -10,6 +10,7 @@ import { DashboardMockup } from "./demo/DashboardMockup";
 import { EscrowFlow } from "./content/EscrowFlow";
 import { StatsBar } from "./content/StatsBar";
 import { TestimonialCards } from "./proof/TestimonialCards";
+import { LogoBar } from "./proof/LogoBar";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -42,53 +43,27 @@ export default function PublishersPage() {
 			</section>
 
 			{/* DEMO TABLE */}
-			<div className="-mt-20 mx-4 sm:mx-8 lg:mx-20 rounded-2xl bg-neutral-800 shadow-2xl">
+			<div className="-mt-20 mx-4 sm:mx-8 lg:mx-12 rounded-2xl bg-neutral-800 shadow-2xl
+										 py-8 px-4 sm:px-6 lg:px-8">
 				<WebsitesDemo />
 			</div>
+
+			<LogoBar />
 
 			{/* ZIGZAG 1: LIST YOUR SITE */}
 			<section className="py-24 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div>
-							<div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">
+							{/* <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">
 								Simple Setup
-							</div>
+							</div> */}
 							<h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
 								List Your Site in Minutes
 							</h2>
 							<p className="text-lg text-gray-600 mb-6">
 								Add your website, set your prices for guest posts and link insertions, and start receiving orders immediately. Our verification process ensures quality and trust.
 							</p>
-							<ul className="space-y-4 mb-8">
-								<li className="flex items-start gap-3">
-									<svg className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span className="text-gray-700">
-										<strong className="text-gray-900">Quick approval:</strong> Get verified in 24-48 hours
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<svg className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span className="text-gray-700">
-										<strong className="text-gray-900">Set your rates:</strong> Full control over pricing and services
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<svg className="w-6 h-6 text-green-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-									</svg>
-									<span className="text-gray-700">
-										<strong className="text-gray-900">Instant visibility:</strong> Get featured to thousands of advertisers
-									</span>
-								</li>
-							</ul>
-							<Button href="/auth/signup" variant="primary">
-								Get Started Free
-							</Button>
 						</div>
 						<DashboardMockup />
 					</div>
@@ -110,33 +85,7 @@ export default function PublishersPage() {
 							<p className="text-lg text-gray-600 mb-6">
 								Our escrow system holds funds securely until you publish the content. No chargebacks, no payment disputes. You publish, you get paid.
 							</p>
-							<ul className="space-y-4 mb-8">
-								<li className="flex items-start gap-3">
-									<svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-									</svg>
-									<span className="text-gray-700">
-										<strong className="text-gray-900">Escrow protection:</strong> Funds secured before you start work
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-									</svg>
-									<span className="text-gray-700">
-										<strong className="text-gray-900">Instant payouts:</strong> Withdraw to PayPal or bank in minutes
-									</span>
-								</li>
-								<li className="flex items-start gap-3">
-									<svg className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-									</svg>
-									<span className="text-gray-700">
-										<strong className="text-gray-900">Low fees:</strong> Keep more of what you earn
-									</span>
-								</li>
-							</ul>
-							<Button href="/auth/signup" variant="primary">
+							<Button href="/auth/signup" variant="ghost">
 								Start Earning Today
 							</Button>
 						</div>

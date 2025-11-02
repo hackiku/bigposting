@@ -1,56 +1,49 @@
 @import "tailwindcss";
 
 @theme {
-	--font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif,
-		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-:root {
-	/* Base colors */
-	--background: #F5F8FA;
-	--foreground: #171717;
-
-	/* Brand colors */
-	--primary: #7be65a;
-	--primary-hover: #6ad149;
-	--secondary: #FF6934;
-	--secondary-hover: #f25620;
-
-	/* UI colors */
-	--menu-bg: #F5F8FA;
-	--content-bg: #ffffff;
-
-	/* Text colors */
-	--text-primary: #171717;
-	--text-secondary: #666666;
-	--text-muted: #999999;
-
-	/* Border colors */
-	--border-light: #e5e7eb;
-	--border-focus: #7be65a;
+	--font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
+:root {
+	/* --background: #F5F8FA; */
+	--background: #FFFFFF;
+	--foreground: #171717;
+	--primary: #7be65a;
+	--primary-foreground: #000000;
+	--secondary: #FF6934;
+	--secondary-foreground: #ffffff;
+	--muted: #f3f4f6;
+	--muted-foreground: #6b7280;
+	--border: #e5e7eb;
+	--input: #e5e7eb;
+	--ring: #7be65a;
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+
+	body {
+		@apply bg-background text-foreground ;
 	}
 }
 
-body {
-	background: var(--background);
-	color: var(--foreground);
-	font-family: theme('fontFamily.sans');
-	-webkit-font-smoothing: antialiased;
-}
-
+/* Animations */
 @keyframes flow {
 	0% {
 		transform: translateX(0);
@@ -68,14 +61,12 @@ body {
 
 	to {
 		transform: translateX(calc(-400px * 3));
-		/* Width of 3 cards */
 	}
 }
 
 @keyframes scroll-right {
 	from {
 		transform: translateX(calc(-400px * 3));
-		/* Width of 3 cards */
 	}
 
 	to {
@@ -92,12 +83,10 @@ body {
 	animation: flow 30s linear infinite;
 }
 
-/* Add hover pause effect */
 .flowing-banner-container:hover .animate-flow {
 	animation-play-state: paused;
 }
 
-/* Gradient effect for text fade */
 .flowing-banner-container::before,
 .flowing-banner-container::after {
 	content: "";
@@ -128,16 +117,8 @@ body {
 
 .testimonial-container {
 	position: relative;
-	mask-image: linear-gradient(to right,
-			transparent 0%,
-			black 25%,
-			black 75%,
-			transparent 100%);
-	-webkit-mask-image: linear-gradient(to right,
-			transparent 0%,
-			black 25%,
-			black 75%,
-			transparent 100%);
+	mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 75%, transparent 100%);
 }
 
 .testimonial-fog-left {
@@ -146,10 +127,7 @@ body {
 	top: 0;
 	bottom: 0;
 	width: 300px;
-	background: linear-gradient(to right,
-			rgb(249 250 251) 0%,
-			rgba(249, 250, 251, 0.8) 40%,
-			transparent 100%);
+	background: linear-gradient(to right, rgb(249 250 251) 0%, rgba(249, 250, 251, 0.8) 40%, transparent 100%);
 	z-index: 10;
 	pointer-events: none;
 }
@@ -160,10 +138,7 @@ body {
 	top: 0;
 	bottom: 0;
 	width: 300px;
-	background: linear-gradient(to left,
-			rgb(249 250 251) 0%,
-			rgba(249, 250, 251, 0.8) 40%,
-			transparent 100%);
+	background: linear-gradient(to left, rgb(249 250 251) 0%, rgba(249, 250, 251, 0.8) 40%, transparent 100%);
 	z-index: 10;
 	pointer-events: none;
 }
@@ -178,12 +153,8 @@ body {
 	pointer-events: none;
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
-	mask-image: linear-gradient(to right,
-			black 0%,
-			transparent 100%);
-	-webkit-mask-image: linear-gradient(to right,
-			black 0%,
-			transparent 100%);
+	mask-image: linear-gradient(to right, black 0%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);
 }
 
 .testimonial-blur-right {
@@ -196,51 +167,27 @@ body {
 	pointer-events: none;
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
-	mask-image: linear-gradient(to left,
-			black 0%,
-			transparent 100%);
-	-webkit-mask-image: linear-gradient(to left,
-			black 0%,
-			transparent 100%);
+	mask-image: linear-gradient(to left, black 0%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to left, black 0%, transparent 100%);
 }
 
-/* Mobile testimonial styles */
 @media (max-width: 768px) {
 	.mobile-testimonial-container {
-		mask-image: linear-gradient(to right,
-				transparent 0%,
-				black 15%,
-				black 85%,
-				transparent 100%);
-		-webkit-mask-image: linear-gradient(to right,
-				transparent 0%,
-				black 15%,
-				black 85%,
-				transparent 100%);
+		mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+		-webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 	}
 
 	.testimonial-fog-left {
 		width: 150px;
-		background: linear-gradient(to right,
-				rgb(249 250 251) 0%,
-				rgba(249, 250, 251, 0.9) 30%,
-				transparent 100%);
+		background: linear-gradient(to right, rgb(249 250 251) 0%, rgba(249, 250, 251, 0.9) 30%, transparent 100%);
 	}
 
 	.testimonial-fog-right {
 		width: 150px;
-		background: linear-gradient(to left,
-				rgb(249 250 251) 0%,
-				rgba(249, 250, 251, 0.9) 30%,
-				transparent 100%);
+		background: linear-gradient(to left, rgb(249 250 251) 0%, rgba(249, 250, 251, 0.9) 30%, transparent 100%);
 	}
 
-	.testimonial-blur-left {
-		width: 200px;
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
-	}
-
+	.testimonial-blur-left,
 	.testimonial-blur-right {
 		width: 200px;
 		backdrop-filter: blur(12px);
@@ -250,11 +197,9 @@ body {
 	.animate-scroll-left,
 	.animate-scroll-right {
 		animation-duration: 30s;
-		/* Slower scrolling on mobile */
 	}
 }
 
-/* Content area background */
 .content-area {
 	background: var(--content-bg);
 	border-radius: 0.5rem;

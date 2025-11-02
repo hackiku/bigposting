@@ -25,7 +25,6 @@ export default function PublishersPage() {
 					<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
 						List your site, set your price, and earn from guest posts and link insertions. Get verified and start receiving orders.
 					</p>
-					<p className="text-foreground">asd</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Button href="/auth/signup" variant="primary">
 							List Your Website
@@ -37,9 +36,9 @@ export default function PublishersPage() {
 				</div>
 			</section>
 
-			<section>
+			<div className="-mt-20 mx-20 rounded-2xl bg-neutral-800">
 				<WebsitesDemo />
-			</section>
+			</div>
 
 			<section className="py-20">
 				<div className="text-center mb-16">

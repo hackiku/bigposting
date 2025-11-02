@@ -25,13 +25,11 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 
 	return (
 		<div className="fixed inset-0 z-[10000] lg:hidden">
-			{/* Overlay */}
-			<div className="absolute inset-0 bg-black/30" onClick={onClose} />
+			<div className="absolute inset-0 bg-black/30 cursor-pointer" onClick={onClose} />
 
-			{/* Slide-in Menu */}
-			<aside className="absolute left-0 top-0 h-full w-[85vw] max-w-sm bg-white shadow-xl flex flex-col">
+			<aside className="absolute right-0 top-0 h-full w-[85vw] max-w-sm bg-white shadow-xl flex flex-col">
 				{/* Header */}
-				<div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
+				<div className="flex items-center justify-between px-6 py-5 border-b border-border">
 					<Image
 						src="/mark.png"
 						alt="Bigposting"
@@ -41,7 +39,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 						onClick={() => handleNavigate("/home")}
 					/>
 					<button
-						className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+						className="p-2 rounded-lg hover:bg-muted transition-colors cursor-pointer"
 						onClick={onClose}
 						aria-label="Close menu"
 					>
@@ -59,9 +57,9 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 							<button
 								key={link.label}
 								onClick={() => handleNavigate(link.path)}
-								className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-colors ${isActive(link.path)
-										? "bg-[#FFD700]/10 text-[#FFD700]"
-										: "text-gray-700 hover:bg-gray-50"
+								className={`w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-colors cursor-pointer ${isActive(link.path)
+										? "bg-primary/10 text-primary"
+										: "text-foreground/80 hover:bg-muted"
 									}`}
 							>
 								{link.label}
@@ -71,23 +69,23 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
 				</nav>
 
 				{/* CTA Buttons */}
-				<div className="px-6 py-6 border-t border-gray-100 space-y-3">
+				<div className="px-6 py-6 border-t border-border space-y-3">
 					<button
 						onClick={() => handleNavigate("/auth/login")}
-						className="w-full px-6 py-3 rounded-lg font-medium text-gray-700 hover:text-[#FFD700] border border-gray-300 hover:border-[#FFD700] transition-colors"
+						className="w-full px-6 py-3 rounded-lg font-medium text-foreground/80 hover:text-primary border border-border hover:border-primary transition-colors cursor-pointer"
 					>
 						Log In
 					</button>
 					<button
 						onClick={() => handleNavigate("/auth/signup")}
-						className="w-full px-6 py-3 rounded-lg font-medium text-black bg-[#FFD700] hover:bg-[#FFC700] transition-colors"
+						className="w-full px-6 py-3 rounded-lg font-medium text-primary-foreground bg-primary hover:bg-primary/90 transition-colors cursor-pointer"
 					>
 						Sign Up
 					</button>
 				</div>
 
 				{/* Footer */}
-				<div className="px-6 py-4 border-t border-gray-100 text-xs text-gray-500">
+				<div className="px-6 py-4 border-t border-border text-xs text-muted-foreground">
 					© {new Date().getFullYear()} Bigposting. All rights reserved.
 				</div>
 			</aside>

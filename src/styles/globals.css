@@ -35,16 +35,16 @@
 
 @layer base {
 	* {
-		@apply border-border;
+		@apply border-border outline-ring/50;
 	}
 
 	body {
-		@apply bg-background text-foreground ;
+		@apply bg-background text-foreground overflow-x-hidden filter invert;
 	}
 }
 
 /* Animations */
-@keyframes flow {
+/* @keyframes flow {
 	0% {
 		transform: translateX(0);
 	}
@@ -72,7 +72,7 @@
 	to {
 		transform: translateX(0);
 	}
-}
+} */
 
 .flowing-banner-container {
 	position: relative;

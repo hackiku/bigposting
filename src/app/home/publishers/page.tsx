@@ -5,6 +5,7 @@ import { Button } from "@/app/_components/ui/Button";
 import { PublishersHero } from "./sections/PublishersHero";
 import { PublishersFeatures } from "./sections/PublishersFeatures";
 import { PublishersCTA } from "./sections/PublishersCTA";
+import WebsitesDemo from "./demo/WebsitesDemo";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function PublishersPage() {
 	return (
-		<main className="">
+		<main className="bg-background">
 
 			<section className="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-emerald-50 ">
 				<div className="max-w-4xl mx-auto text-center">
@@ -36,6 +37,9 @@ export default function PublishersPage() {
 				</div>
 			</section>
 
+			<section>
+				<WebsitesDemo />
+			</section>
 
 			<section className="py-20">
 				<div className="text-center mb-16">

@@ -13,6 +13,7 @@ import { TestimonialCards } from "./proof/TestimonialCards";
 import { LogoBar } from "./proof/LogoBar";
 import { NumberSticker } from "./proof/NumberSticker";
 import { WhiteLogos } from "@/components/proof/WhiteLogos";
+import { LiquidAsset } from "@/components/ui/LiquidAsset";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -50,9 +51,9 @@ export default function PublishersPage() {
 				</div>
 
 				{/* Hero Content - highest z-index */}
-				<div className="dev relative z-10 max-w-3xl mx-auto text-center">
+				<div className="relative z-10 max-w-3xl mx-auto text-center">
 					<h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-						Monetize Your Website with <span className="text-green-600">Guest Posts</span>
+						Make <span className="text-green-600">$$</span> from your Website with <span className="text-green-600">Guest Posts</span>
 					</h1>
 					<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
 						List your site, set your price, and earn from guest posts and link insertions. Get verified and start receiving orders.
@@ -82,22 +83,47 @@ export default function PublishersPage() {
 					<div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-neutral-800 via-neutral-800/80 to-transparent pointer-events-none z-10" />
 
 					{/* CTA Section - Top layer */}
-					<div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-4 pointer-events-none z-20">
-						<h3 className="text-white">See more</h3>
+					<div className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-4 pointer-events-none z-20">
+						<p className="text-sm font-semibold text-white/60 uppercase tracking-wider">
+							Trusted by Marketers from
+						</p>
+						<div className="pointer-events-auto">
+							<WhiteLogos count={6} opacity={0.4} brightness={1.5} />
+						</div>
 						<a
 							href="/auth/signup"
 							className="pointer-events-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
 						>
 							Join as Publisher
 						</a>
-						<div className="pointer-events-auto">
-							<WhiteLogos count={6} opacity={0.4} brightness={1.5} />
-						</div>
 					</div>
 
 				</div>
 			</div>
 			<LogoBar />
+
+			<LiquidAsset liquidSide="left">
+				{/* Left: Visual */}
+				<div>
+					<EscrowFlow />
+				</div>
+
+				{/* Right: Content */}
+				<div>
+					<h2>Get Paid Safely</h2>
+					<p>Escrow protection...</p>
+				</div>
+			</LiquidAsset>
+
+
+			<LiquidAsset color="green">
+				<div>
+					<h2>List Your Site in Minutes</h2>
+					<p>Add your website...</p>
+				</div>
+				<DashboardMockup />
+			</LiquidAsset>
+
 
 			{/* ZIGZAG 1: LIST YOUR SITE */}
 			<section className="py-24 bg-white">

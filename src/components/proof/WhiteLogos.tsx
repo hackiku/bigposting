@@ -31,7 +31,7 @@ export function WhiteLogos({
 	);
 
 	return (
-		<div className="flex items-center justify-center gap-6 sm:gap-8 flex-wrap px-4 py-6">
+		<div className="flex items-center justify-center gap-6 sm:gap-8 flex-wrap px-4 py-2">
 			{Array.from({ length: count }).map((_, idx) => (
 				<div
 					key={idx}

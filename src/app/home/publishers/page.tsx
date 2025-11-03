@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 import { Button } from "@/app/_components/ui/Button";
-import WebsitesDemo from "./demo/WebsitesDemo";
+import { DemoTable } from "./demo/DemoTable";
 import { PublisherBenefits } from "./content/PublisherBenefits";
 import { ProcessSteps } from "./content/ProcessSteps";
 import { PublishersPricing } from "./content/PublishersPricing";
@@ -11,6 +11,8 @@ import { EscrowFlow } from "./content/EscrowFlow";
 import { StatsBar } from "./content/StatsBar";
 import { TestimonialCards } from "./proof/TestimonialCards";
 import { LogoBar } from "./proof/LogoBar";
+import { NumberSticker } from "./proof/NumberSticker";
+import { WhiteLogos } from "@/components/proof/WhiteLogos";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -22,9 +24,33 @@ export default function PublishersPage() {
 	return (
 		<main className="bg-background">
 
-			{/* HERO */}
-			<section className="py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-emerald-50">
-				<div className="max-w-4xl mx-auto text-center">
+			{/* HERO - Isolated stacking context */}
+			<section className="relative py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden isolate">
+				{/* Background gradient - stays behind everything */}
+				<div className="absolute inset-0 bg-gradient-to-br from-green-50 to-emerald-50 -z-10" />
+
+				{/* Floating Stickers - above bg, below content */}
+				{/* <div className="absolute top-12 left-8 hidden lg:block z-0"></div> */}
+				{/* <div className="absolute top-20 right-12 hidden lg:block z-0"></div> */}
+				<div className="absolute bottom-22 left-20 hidden xl:block z-0">
+					<NumberSticker
+						number="5,000+"
+						label="Active Publishers"
+						rotation={-8}
+						color="green"
+					/>
+				</div>
+				<div className="absolute bottom-20 right-16 hidden xl:block z-0">
+					<NumberSticker
+						number="$2M+"
+						label="Paid Out"
+						rotation={6}
+						color="blue"
+					/>
+				</div>
+
+				{/* Hero Content - highest z-index */}
+				<div className="dev relative z-10 max-w-3xl mx-auto text-center">
 					<h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
 						Monetize Your Website with <span className="text-green-600">Guest Posts</span>
 					</h1>
@@ -42,12 +68,35 @@ export default function PublishersPage() {
 				</div>
 			</section>
 
-			{/* DEMO TABLE */}
-			<div className="-mt-20 mx-4 sm:mx-8 lg:mx-12 rounded-2xl bg-neutral-800 shadow-2xl
-										 py-8 px-4 sm:px-6 lg:px-8">
-				<WebsitesDemo />
-			</div>
+			{/* DEMO TABLE - Clean overlap with proper z-index */}
+			{/* DEMO TABLE - Clean overlap with proper z-index */}
+			<div className="relative -mt-20 mx-4 sm:mx-8 lg:mx-12 z-20">
+				<div className="relative rounded-2xl bg-neutral-800 shadow-2xl py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
 
+					{/* Demo Table Content - Base layer */}
+					<div className="relative z-0">
+						<DemoTable />
+					</div>
+
+					{/* Gradient Fade Overlay - Above table */}
+					<div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-neutral-800 via-neutral-800/80 to-transparent pointer-events-none z-10" />
+
+					{/* CTA Section - Top layer */}
+					<div className="absolute inset-x-0 bottom-8 flex flex-col items-center gap-4 pointer-events-none z-20">
+						<h3 className="text-white">See more</h3>
+						<a
+							href="/auth/signup"
+							className="pointer-events-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+						>
+							Join as Publisher
+						</a>
+						<div className="pointer-events-auto">
+							<WhiteLogos count={6} opacity={0.4} brightness={1.5} />
+						</div>
+					</div>
+
+				</div>
+			</div>
 			<LogoBar />
 
 			{/* ZIGZAG 1: LIST YOUR SITE */}
@@ -55,9 +104,6 @@ export default function PublishersPage() {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div>
-							{/* <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-semibold mb-4">
-								Simple Setup
-							</div> */}
 							<h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
 								List Your Site in Minutes
 							</h2>
@@ -91,7 +137,7 @@ export default function PublishersPage() {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> 
 
 			{/* BENEFITS */}
 			<section className="py-24 bg-white">

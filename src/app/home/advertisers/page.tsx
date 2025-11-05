@@ -10,6 +10,8 @@ import { WhiteLogos } from "@/components/proof/WhiteLogos";
 import { SignUpButton } from "@/components/cta/SignUpButton";
 import { DataProviders } from "@/components/proof/DataProviders";
 import { SvgBackground } from "@/components/ui/SvgBackground";
+import { FiSearch } from "react-icons/fi";
+import WebsitesDemo from "../publishers/demo/WebsitesDemo";
 
 export const metadata: Metadata = {
 	title: "For Advertisers: Get Quality Backlinks - Bigposting",
@@ -28,7 +30,7 @@ export default function AdvertisersPage() {
 			<section className="relative py-20 lg:py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden isolate">
 				<div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 -z-10" />
 
-				<div className="absolute -bottom-2 left-[12%] z-0">
+				<div className="absolute bottom-12 left-[12%] z-0">
 					<AdvertiserSticker
 						number="DA 40+"
 						label="High Authority"
@@ -38,8 +40,8 @@ export default function AdvertisersPage() {
 				</div>
 
 				<div className="relative z-10 max-w-3xl mx-auto text-center">
-					<h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
-						Get Quality <span className="text-blue-600">Backlinks</span> on Verified Sites
+					<h1 className="text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+						Guest Post <span className="text-blue-600">Backlinks</span> on Verified Sites
 					</h1>
 					<p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
 						Place guest posts on verified websites with real traffic. Transparent pricing, fast turnaround, escrow protection.
@@ -53,15 +55,19 @@ export default function AdvertisersPage() {
 			{/* DEMO TABLE */}
 			<section className="relative mx-4 sm:mx-8 lg:mx-12 z-20 mb-24">
 				<div className="relative rounded-2xl bg-neutral-800 shadow-2xl py-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
-					<h3 className="mb-6 text-2xl font-bold text-white">
-						Post on{" "}
-						<span className="text-primary font-black">
-							{websiteNumber.toLocaleString()}
-						</span>{" "}
-						Verified Websites
-					</h3>
+					<div className="text-white flex gap-2 items-center my-6">
+						<FiSearch size={"24"}/>
+						<h3 className=" text-4xl font-bold text-white">
+							Post on{" "}
+							<span className="text-primary font-black">
+								{websiteNumber.toLocaleString()}
+							</span>{" "}
+							Verified Websites
+						</h3>
+					</div>
 
 					<div className="relative z-0">
+						<WebsitesDemo />
 						<DemoTableAdvertiser />
 					</div>
 
@@ -72,13 +78,14 @@ export default function AdvertisersPage() {
 							Trusted by Agencies & Brands
 						</p>
 						<div className="pointer-events-auto">
-							<WhiteLogos count={6} opacity={0.4} brightness={1.5} />
+							<WhiteLogos count={4} opacity={0.4} brightness={1.5} />
 						</div>
 						<a
 							href="/auth/signup"
 							className="pointer-events-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
 						>
-							Start Ordering
+							Browse Websites
+							<span className="text-green-700/60 font-medium italic"> — FREE</span>
 						</a>
 					</div>
 				</div>
@@ -96,25 +103,26 @@ export default function AdvertisersPage() {
 
 						<div className="flex flex-col justify-center">
 							<h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-								Find The Perfect Publisher in Seconds
+								Perfect-Match Publishers are 3s away
+								{/* Find The Perfect Publisher in Seconds */}
 							</h2>
 							<p className="text-2xl text-gray-600 mb-8">
 								DA 40+? Tech niche? English only? Under $200?
 								Filter, click, order. No research rabbit holes.
 							</p>
-							<div className="mt-4">
+							{/* <div className="mt-4">
 								<p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
 									Verified with data from
 								</p>
 								<DataProviders />
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
 			</section>
 
 			{/* ESCROW PROTECTION */}
-			<section className="py-24 bg-gray-50 relative overflow-hidden">
+			<section className="py-24 relative max-w-[1920px] px-4 pt-40 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
 				<SvgBackground side="left" color="purple" />
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -132,16 +140,16 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* WORKFLOW */}
-			<section className="py-24 bg-white relative overflow-hidden">
+			<section className="py-24 relative max-w-[1920px] px-4 pt-40 sm:px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
 				<SvgBackground side="right" color="green" />
 
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div className="mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="text-center mb-16">
 						<h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
-							Manage Everything in One Platform
+							All things Guest Posting
 						</h2>
-						<p className="text-xl text-gray-600 max-w-2xl mx-auto">
-							Track orders, manage campaigns, and scale your link building effortlessly
+						<p className="text-2xl leading-relaxed text-gray-600 max-w-2xl mx-auto">
+							Track orders, manage campaigns, scale link building effortlessly
 						</p>
 					</div>
 					<AdvertiserBenefits />
@@ -152,7 +160,7 @@ export default function AdvertisersPage() {
 			<section className="relative mx-4 sm:mx-8 lg:mx-12 mb-24">
 				<div className="relative rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
 					<div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl mx-auto text-center">
-						<WhiteLogos count={6} opacity={0.6} brightness={1.8} />
+						<WhiteLogos count={4} opacity={0.6} brightness={1.8} />
 
 						<div>
 							<h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">

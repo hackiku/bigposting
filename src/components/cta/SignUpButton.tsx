@@ -66,7 +66,7 @@ export function SignUpButton({
 					skew-x-12`}
 				/>
 
-				<span className="relative z-10 flex items-center gap-2 font-semibold text-2xl">
+				<span className="text-xl relative z-10 flex items-center gap-2 font-semibold">
 					{text}
 					{/* <span className="inline-block animate-bounce italic text-green-700 px-3 py-1 rounded-full ">Free</span> */}
 				</span>

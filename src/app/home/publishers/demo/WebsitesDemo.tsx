@@ -39,7 +39,7 @@ export default function WebsitesDemo() {
 					<div className="flex items-center justify-between">
 						<h2 className="text-lg font-semibold text-gray-800">
 							{/* x1535  */}
-							Found: <span className="text-blue-600">{filteredWebsites.length * 1535} Approved Websites</span> 
+							Found: <span className="text-blue-600">{filteredWebsites.length} Approved Websites</span>
 							<span className="text-sm text-gray-500 ml-2">
 								Showing 1-{filteredWebsites.length} of {filteredWebsites.length}
 							</span>

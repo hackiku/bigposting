@@ -13,7 +13,6 @@ const providers = [
 export function DataProviders() {
 	return (
 		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h4 className="text-center mb-8 text-lg font-semibold">Verified with data from</h4>
 			<div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
 				{providers.map((provider, index) => (
 					<div

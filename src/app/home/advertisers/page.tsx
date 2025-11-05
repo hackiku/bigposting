@@ -26,21 +26,16 @@ export default function AdvertisersPage() {
 				<div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 -z-10" />
 
 				{/* Floating Stickers */}
-				<div className="absolute bottom-22 left-20 hidden xl:block z-0">
-					<AdvertiserSticker
-						number="150K+"
-						label="Quality Sites"
-						rotation={-8}
-						color="blue"
-					/>
-				</div>
-				<div className="absolute bottom-20 right-16 hidden xl:block z-0">
+				<div className="absolute bottom-20 left-20 hidden xl:block z-0">
 					<AdvertiserSticker
 						number="DA 40+"
 						label="High Authority"
-						rotation={6}
+						rotation={-12}
 						color="green"
 					/>
+				</div>
+				<div className="absolute bottom-20 right-16 hidden xl:block z-0">
+					
 				</div>
 
 				{/* Hero Content */}

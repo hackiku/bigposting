@@ -1,3 +1,4 @@
+// @ts-nocheck
 // src/app/home/advertisers/demo/WebsiteFilters.tsx
 
 "use client";

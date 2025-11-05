@@ -89,7 +89,10 @@ export function PublishersPricing() {
 				))}
 			</div>
 
+			<div>
 			<SignUpButton text="Join as Advertiser" />
+
+			</div>
 			<WhiteLogos />
 
 

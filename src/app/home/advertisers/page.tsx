@@ -8,6 +8,7 @@ import { OrderProtection } from "./content/OrderProtection";
 import { AdvertiserSticker } from "./_components/AdvertiserSticker";
 import { AdvertiserBenefits } from "./content/AdvertiserBenefits";
 import { WhiteLogos } from "@/components/proof/WhiteLogos";
+import { SignUpButton } from "@/components/cta/SignUpButton";
 
 export const metadata: Metadata = {
 	title: "For Advertisers: Get Quality Backlinks - Bigposting",
@@ -47,9 +48,7 @@ export default function AdvertisersPage() {
 						Place guest posts on verified websites with real traffic. Transparent pricing, fast turnaround, escrow protection.
 					</p>
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
-						<Button href="/auth/signup" variant="primary">
-							Browse Websites
-						</Button>
+						<SignUpButton text="Become an Advertiser"/>
 					</div>
 				</div>
 			</section>
@@ -96,21 +95,32 @@ export default function AdvertisersPage() {
 			<section className="py-24 bg-white relative overflow-hidden">
 				{/* Decorative blob */}
 				<div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-100 to-transparent blur-3xl opacity-40 -z-10" />
+				
+				<div className="ml-auto mr-12 max-w-xl">
+					<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+						Find the Perfect Publisher Every Time
+					</h2>
+				</div>
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
+						<WebsiteFilters />
 						<div>
-							<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-								Find the Perfect Publisher Every Time
-							</h2>
 							<p className="text-xl text-gray-600">
 								Browse 150K+ verified websites with advanced filtering. Search by domain authority, traffic volume, spam score, category, language, and dozens more metrics. Every site is hand-verified with real data from Moz, Ahrefs, and Google Analytics. See exact pricing upfront before you order.
 							</p>
 						</div>
-						<WebsiteFilters />
 					</div>
 				</div>
+
+				<div className="bg-foreground/20">
+					{/* DataProviders */}
+				</div>
+
 			</section>
+
+			{/* < */}
+			
 
 			{/* ZIGZAG 2: ORDER WITH CONFIDENCE */}
 			<section className="py-24 bg-gray-50 relative overflow-hidden">

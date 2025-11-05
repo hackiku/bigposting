@@ -1,7 +1,7 @@
 // src/app/home/layout.tsx
 
-import { Header } from "@/app/_components/layout/Header";
-import { Footer } from "@/app/_components/layout/Footer";
+import { Header } from "@/components/navigation/Header.tsx"
+import { Footer } from "@/components/navigation/Footer.tsx";
 
 
 // This layout wraps all /home/* routes

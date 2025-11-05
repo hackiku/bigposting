@@ -1,4 +1,4 @@
-// src/app/home/advertisers/_components/AdvertiserSticker.tsx
+// src/app/home/advertisers/content/AdvertiserSticker.tsx
 
 interface AdvertiserStickerProps {
 	number: string;

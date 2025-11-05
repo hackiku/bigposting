@@ -1,4 +1,4 @@
-// demo/utils/languageFlags.ts
+// src/app/home/advertisers/demo/utils/languageFlags.ts
 /**
  * Utility functions for mapping languages to country flags
  */

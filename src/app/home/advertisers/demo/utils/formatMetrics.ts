@@ -1,5 +1,5 @@
 
-// src/app/home/publishers/demo/utils/formatMetrics.ts
+// src/app/home/advertisers/demo/utils/formatMetrics.ts
 
 /**
  * Format traffic for table display

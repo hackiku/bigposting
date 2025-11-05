@@ -1,4 +1,4 @@
-// src/app/home/advertisers/_components/stats/QuickStats.tsx
+// src/app/home/advertisers/contentAdvertiserStats.tsx
 
 const stats = [
 	{

@@ -21,7 +21,8 @@
 :root {
 	/* --background: #F5F8FA; */
 	--background: #FFFFFF;
-	--foreground: #171717;
+	--foreground: #30325F;
+	/* --foreground: #171717; */
 	--primary: #7be65a;
 	--primary-foreground: #000000;
 	--secondary: #FF6934;

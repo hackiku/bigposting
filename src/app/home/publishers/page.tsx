@@ -1,7 +1,7 @@
 // src/app/home/publishers/page.tsx
 
 import type { Metadata } from "next";
-import { Button } from "@/app/_components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import { DemoTable } from "./demo/DemoTable";
 import { PublisherBenefits } from "./content/PublisherBenefits";
 import { DashboardMockup } from "./demo/DashboardMockup";

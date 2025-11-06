@@ -1,9 +1,12 @@
+// src/app/page.t
 import Link from "next/link";
+import { redirect } from "next/navigation"
 
-import { LatestPost } from "@/app/_components/post";
+// import { LatestPost } from "@/app/_components/post";
 import { HydrateClient, api } from "@/trpc/server";
 
 export default async function Home() {
+	redirect("/home")
 	const hello = await api.post.hello({ text: "from tRPC" });
 
 	void api.post.getLatest.prefetch();
@@ -45,7 +48,7 @@ export default async function Home() {
 						</p>
 					</div>
 
-					<LatestPost />
+					{/* <LatestPost /> */}
 				</div>
 			</main>
 		</HydrateClient>

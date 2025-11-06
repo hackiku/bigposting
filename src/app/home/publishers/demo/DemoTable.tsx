@@ -3,7 +3,7 @@
 "use client";
 
 import { WhiteLogos } from '@/components/proof/WhiteLogos';
-import { demoWebsites } from './data';
+import { demoWebsites } from '../data/mini-table-data';
 import { VerificationBadge } from './VerificationBadge';
 
 export function DemoTable() {

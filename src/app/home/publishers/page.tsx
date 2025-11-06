@@ -1,16 +1,18 @@
 // src/app/home/publishers/page.tsx
 
 import type { Metadata } from "next";
+// components
 import { SignUpButton } from "@/components/cta/SignUpButton";
 import { WhiteLogos } from "@/components/proof/WhiteLogos";
 import { TestimonialCards } from "@/components/proof/TestimonialCards";
 import { StatSticker } from "@/components/ui/StatSticker";
-import { DemoTable } from "./demo/DemoTable";
+// content
 import { PublisherBenefits } from "./content/PublisherBenefits";
-import { DashboardMockup } from "./demo/DashboardMockup";
 import { EscrowFlow } from "./content/EscrowFlow";
-import { StatsBar } from "./content/StatsBar";
-import { PublishersPricing } from "./pricing/PublishersPricing";
+import { PublishersPricing } from "./content/PublishersPricing";
+// demo
+import { DashboardMockup } from "./demo/DashboardMockup";
+import { DemoTable } from "./demo/DemoTable";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",

@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
 import { FiChevronDown, FiSearch } from "react-icons/fi";
-import { desktopNavLinks } from "@/data/config/navigation";
+import { desktopNavLinks } from "@/data/navigation";
 import { MobileNav } from "./MobileNav";
 
 export function Header() {

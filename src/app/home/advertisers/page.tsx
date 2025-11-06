@@ -8,7 +8,7 @@ import { WhiteLogos } from "@/components/proof/WhiteLogos";
 import { TestimonialCards } from "@/components/proof/TestimonialCards";
 import { DataProviders } from "@/components/proof/DataProviders";
 // content
-import { AdvertiserSticker } from "./content/AdvertiserSticker";
+import { StatSticker } from "@/components/ui/StatSticker";
 import { AdvertiserBenefits } from "./content/AdvertiserBenefits";
 import { EscrowProcess } from "./content/EscrowProcess";
 // demo
@@ -34,7 +34,7 @@ export default function AdvertisersPage() {
 				<div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 -z-10" />
 
 				<div className="absolute bottom-6 right-[8%] z-0">
-					<AdvertiserSticker
+					<StatSticker
 						number="20,000+"
 						label="Published Guest Posts"
 						rotation={10}
@@ -42,7 +42,7 @@ export default function AdvertisersPage() {
 					/>
 				</div>
 				<div className="absolute bottom-12 left-[12%] z-0">
-					<AdvertiserSticker
+					<StatSticker
 						number="DA 40+"
 						label="High Authority"
 						rotation={-12}
@@ -147,7 +147,7 @@ export default function AdvertisersPage() {
 							<p className="text-2xl leading-relaxed text-gray-600 mb-8">
 								Simple bidding system. Publishers accept, write content, publish. You track everything in real-time from one dashboard.
 							</p>
-								<AdvertiserSticker
+								<StatSticker
 									number="2-4 days"
 									label="Average Turnaround"
 									rotation={-10}

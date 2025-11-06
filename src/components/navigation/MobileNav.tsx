@@ -3,7 +3,7 @@
 
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
-import { mobileNavLinks } from "@/data/config/navigation";
+import { mobileNavLinks } from "@/data/navigation";
 
 interface MobileNavProps {
 	isOpen: boolean;

@@ -32,8 +32,8 @@ const tiers = [
 
 export function PublishersPricing() {
 	return (
-		<div className="flex flex-col bg-neutral-800 rounded-2xl p-8 lg:p-12">
-			<h2 className="text-3xl lg:text-4xl font-bold text-white text-center mb-12">
+		<div className="flex flex-col gap-8 bg-neutral-800 rounded-2xl p-8 lg:p-12">
+			<h2 className="text-4xl lg:text-5xl font-bold text-white text-center m-6">
 				How Much Can You Earn?
 			</h2>
 
@@ -89,11 +89,10 @@ export function PublishersPricing() {
 				))}
 			</div>
 
-			<div>
-			<SignUpButton text="Join as Advertiser" />
-
-			</div>
 			<WhiteLogos />
+			<SignUpButton text="Join as Advertiser" />
+		<div>
+		</div>
 
 
 		</div>

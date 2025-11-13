@@ -83,8 +83,8 @@ export default function AdvertisersPage() {
 							href="/auth/signup"
 							className="pointer-events-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
 						>
-							Browse Websites
-							<span className="text-green-700/60 font-medium italic ml-2">— FREE</span>
+							Browse All Websites
+							{/* <span className="text-green-700/60 font-medium italic ml-2">— FREE</span> */}
 						</a>
 					</div>
 				</div>
@@ -146,28 +146,42 @@ export default function AdvertisersPage() {
 							<p className="text-2xl leading-relaxed text-gray-600 mb-8">
 								Simple bidding system. Publishers accept, write content, publish. You track everything in real-time from one dashboard.
 							</p>
-								<StatSticker
-									number="2-4 days"
-									label="Average Turnaround"
-									rotation={-10}
-									color="green"
-								/>
+							<StatSticker
+								number="Fast Turnaround"
+								label="Get your links live at lightspeed"
+								rotation={-10}
+								color="green"
+							/>
 						</div>
 					</div>
 				</div>
 
+				{/* Bottom wave - hides orange bg bleeding */}
 				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="rotate-180">
-					<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path> 
+					<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
 				</svg>
 
 			</section>
 
-			<div className="flex flex-col items-center gap-8 mx-auto -mt-62 pb-24 border">
-				<OrderingFlow />
-				<SignUpButton text="Join for Free" variant="red"/>
-			</div>			
+			{/* ORDERING FLOW - positioned to overlap with wave above */}
+			<section className="relative -mt-44 pb-24 _bg-white">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="flex flex-col items-center gap-8">
+						<OrderingFlow />
+						<SignUpButton text="Join for Free" variant="red" />
+					</div>
+				</div>
+			</section>
+
+
+
 			{/* ESCROW PROTECTION */}
-			<section className="py-12 bg-white">
+			<section className="bg-linear-to-br from-blue-50 to-indigo-50">
+
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="+rotate-180">
+					<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+				</svg>
+
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
 						<h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-4">

@@ -38,8 +38,6 @@ Replace orange/golden buttons with a modern, clean color — consider Bigposting
 
 Use rounded buttons, subtle shadow, and hover animation.
 
-
-
 Visual:
 Add a screenshot of the publisher dashboard or “Add Website” form inside a laptop mockup, similar to https://getlinko.com/en/3-editors/
 .
@@ -59,15 +57,9 @@ Add a short subtext like:
 
 “Trusted by website owners across home, tech, business, and lifestyle niches.”
 
-
-
 🟩 3. “How It Works” Section
 
-
-
 Keep the step-by-step layout but add icons or numbers (1-2-3-4).
-
-
 
 Replace the current descriptions with shorter, clearer actions:
 1️⃣ Add your website
@@ -75,60 +67,32 @@ Replace the current descriptions with shorter, clearer actions:
 3️⃣ Receive guest post orders
 4️⃣ Withdraw your earnings
 
-
-
 Add a note below:
-
-
 
 “Verified websites get priority in search results and faster approval.”
 
-
-
 Include real screenshots of:
 
-
-
 “Add website” form
-
-
-
 Verification process
-
-
-
 “My Orders” view
 (show them inside a browser window or laptop mockup for realism)
 
-
-
 🟩 4. Publisher Requirements
-
-
 
 Reintroduce a Publisher Requirements section (missing in mockup).
 Example content:
-
-
 
 ✅ You must own or manage the website.
 ✅ Original content, no AI-generated or spun text.
 ✅ No casino, adult, or illegal content.
 ✅ Clear pricing and TAT required.
 
-
-
 Display it as a clean checklist block with green check icons.
-
-
 
 🟩 5. “Why Join Bigposting” Section
 
-
-
 Replace generic bullets with benefit-focused points:
-
-
 
 Earn up to 91% of each sale (only 9% platform fee).
 

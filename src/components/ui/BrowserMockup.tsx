@@ -30,8 +30,8 @@ export function BrowserMockup({ title, children }: BrowserMockupProps) {
 
 			{/* Content with blurry background - aspect ratio 839:537 */}
 			<div className="relative bg-white" style={{ aspectRatio: '839 / 537' }}>
-				{/* Blurry Background */}
-				<div className="absolute inset-0">
+				{/* Blurry Background - explicitly z-0 */}
+				<div className="absolute inset-0 z-0">
 					<Image
 						src="/screenshots/blurry-background.webp"
 						alt="Background"
@@ -41,10 +41,8 @@ export function BrowserMockup({ title, children }: BrowserMockupProps) {
 					/>
 				</div>
 
-				{/* Content on top */}
-				<div className="relative z-20">
-					{children}
-				</div>
+				{/* Content on top - explicitly z-10 and must be direct child of relative parent */}
+				{children}
 			</div>
 		</div>
 	);

@@ -1,4 +1,4 @@
-// src/app/home/advertisers/content/OrderingFlow.tsx
+// src/app/home/advertisers/features/OrderingFlow.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -46,14 +46,12 @@ export function OrderingFlow() {
 	};
 
 	return (
-		<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			{/* Header */}
-
+		<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 			{/* Browser Mockup with Carousel */}
 			<div className="relative">
 				<BrowserMockup title={slides[currentSlide].title}>
-					{/* Screenshot overlaid on blurry background */}
-					<div className="absolute inset-0 flex items-center justify-center p-4 sm:p-8">
+					{/* CRITICAL: This wrapper must have z-10 and be relative/absolute to appear above bg */}
+					<div className="absolute inset-0 z-10 flex items-center justify-center p-4 sm:p-8">
 						<div className="relative w-full h-full max-w-[90%] max-h-[90%]">
 							<Image
 								src={slides[currentSlide].image}

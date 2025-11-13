@@ -7,6 +7,11 @@
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
+	/* brand colors */
+	--color-brand-red: var(--brand-red);
+	--color-brand-orange: var(--brand-orange);
+	--color-brand-green: var(--brand-green);
+	/* shadcn colors */
 	--color-primary: var(--primary);
 	--color-primary-foreground: var(--primary-foreground);
 	--color-secondary: var(--secondary);
@@ -19,10 +24,13 @@
 }
 
 :root {
-	/* --background: #F5F8FA; */
 	--background: #FFFFFF;
 	--foreground: #30325F;
-	/* --foreground: #171717; */
+	/* brand */
+	--brand-red: #FD4653;
+	--brand-orange: #FC7B61;
+	--brand-green: #01C9AA;
+	/* shadcn */
 	--primary: #7be65a;
 	--primary-foreground: #000000;
 	--secondary: #FF6934;

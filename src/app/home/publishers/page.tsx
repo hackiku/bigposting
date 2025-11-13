@@ -50,11 +50,11 @@ export default function PublishersPage() {
 					<h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
 						Earn <span className="text-green-600">+$$</span> from Guest Posts on your Site
 					</h1>
-					<p className="text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+					<p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
 						List your website, set prices, get verified. See orders pour in within 24 hours.
 					</p>
 					<div className="flex justify-center">
-						<SignUpButton text="List Your Website Free" />
+						<SignUpButton text="List Your Website Free" variant="orange"/>
 					</div>
 				</div>
 			</section>
@@ -66,6 +66,7 @@ export default function PublishersPage() {
 						<DemoTable />
 					</div>
 
+					{/* gradient */}
 					<div className="absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t from-neutral-800 via-neutral-800/70 to-transparent pointer-events-none z-10" />
 
 					<div className="absolute inset-x-0 bottom-12 flex flex-col items-center gap-4 pointer-events-none z-20">
@@ -86,7 +87,7 @@ export default function PublishersPage() {
 			</div>
 		</section>
 
-			{/* ZIGZAG 1: START EARNING */ }
+	{/* ZIGZAG 1: START EARNING */ }
 	<section className="mt-20 relative overflow-hidden">
 		{/* Purple blob background */}
 		<div className="absolute bottom-0 left-0 w-full h-full pointer-events-none opacity-20">

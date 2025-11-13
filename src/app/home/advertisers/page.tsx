@@ -15,6 +15,7 @@ import { EscrowProcess } from "./content/EscrowProcess";
 import { FloatingDashboardUI } from "./demo/FloatingDashboardUI";
 import { CampaignDashboard } from "./demo/CampaignDashboard";
 import WebsitesDemo from "./demo/WebsitesDemo";
+import Image from "next/image";
 
 export const metadata: Metadata = {
 	title: "For Advertisers: Get Quality Backlinks - Bigposting",
@@ -31,9 +32,10 @@ export default function AdvertisersPage() {
 		<main className="bg-background">
 			{/* HERO */}
 			<section className="relative py-12 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden isolate">
+				
 				<div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 -z-10" />
 
-				<div className="absolute bottom-6 right-[8%] z-0">
+				{/* <div className="absolute bottom-6 right-[8%] z-0">
 					<StatSticker
 						number="20,000+"
 						label="Published Guest Posts"
@@ -48,17 +50,17 @@ export default function AdvertisersPage() {
 						rotation={-12}
 						color="green"
 					/>
-				</div>
+				</div> */}
 
 				<div className="relative z-10 max-w-3xl mx-auto text-center">
 					<h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6">
 						Keep your Backlinks Flowing <span className="text-blue-600">Fresh + Fast</span>
 					</h1>
-					<p className="text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+					<p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
 						Negotiate guest posts directly with publishers at clear prices secured by escrow.
 					</p>
 					<div className="flex justify-center">
-						<SignUpButton text="Join as Advertiser" />
+						<SignUpButton text="Register for Free" />
 					</div>
 				</div>
 			</section>
@@ -173,7 +175,7 @@ export default function AdvertisersPage() {
 							100% Escrow Protected
 						</h2>
 						<p className="text-2xl text-gray-600 max-w-2xl mx-auto">
-							Your funds stay safe until content is live. Not satisfied? Full refund. Zero risk.
+							Your funds are securely held until the content is reviewed and approved by you. Payments are only released once the publication is verified on the target site.
 						</p>
 					</div>
 
@@ -182,19 +184,37 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* TESTIMONIALS */}
-			<section className="pt-20 sm:mx-6 lg:mx-8 bg-gray-50">
 
-				<div className="py-16 relative rounded-2xl bg-neutral-800 shadow-2xl px-4 sm:px-6 lg:px-8 overflow-hidden">					
+			<section className="pt-20 sm:mx-6 lg:mx-8 relative overflow-visible">
+				{/* Background Image - starts 66% hidden, animates up on load */}
+				<div className="relative h-[200px] -mb-[100px] overflow-visible">
+					<div
+						className="w-3/4 mx-auto h-full relative opacity-0 translate-y-[66%] animate-[slideUp_0.8s_ease-out_0.3s_forwards]"
+					>
+						<Image
+							src="/screenshots/advertisers/balances-invoices.png"
+							alt="Platform Dashboard Preview"
+							width={1200}
+							height={300}
+							className="w-full h-auto object-contain drop-shadow-lg"
+							priority={false}
+						/>
+					</div>
+				</div>
+
+				{/* Dark Card with Testimonials - overlaps image */}
+				<div className="relative z-10 py-16 rounded-2xl bg-neutral-800 shadow-2xl px-4 sm:px-6 lg:px-8 overflow-hidden">
 					<h2 className="text-center pb-8 text-white text-4xl lg:text-5xl font-bold mb-4">
 						Trusted by SEO Professionals
 					</h2>
 
-					<TestimonialCards />
+					<TestimonialCards type="advertiser" />
 				</div>
 			</section>
 
-			{/* WORKFLOW - with yellow gradient */}
-			<section className="py-24 bg-linear-to-b from-transparent via-yellow-100/30 to-yellow-200 relative">
+			{/* WORKFLOW */}
+			<section className="py-24 bg-linear-to-b from-transparent via-blue-50/70 to-indigo-50 relative">
+				<h1 className="text-3xl text-center mb-12">asdasdasdas</h1>
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl lg:text-5xl font-bold  mb-4">
@@ -207,7 +227,7 @@ export default function AdvertisersPage() {
 					<AdvertiserBenefits />
 
 					{/* FINAL CTA inside this section */}
-					<div className="mt-20 relative rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+					<div className="mt-20 relative rounded-2xl bg-linear-to-br from-indigo-900 to-[#30315C] shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
 						<div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl mx-auto text-center">
 							<WhiteLogos count={4} opacity={0.6} brightness={1.8} />
 
@@ -220,7 +240,7 @@ export default function AdvertisersPage() {
 								</p>
 							</div>
 
-							<SignUpButton text="Start Ordering Free" />
+							<SignUpButton text="Start Ordering Now" />
 
 							<p className="text-white/70 text-sm mt-2">
 								Create a free account to find publishers

@@ -3,7 +3,6 @@
 import type { Metadata } from "next";
 // components
 import { SignUpButton } from "@/components/cta/SignUpButton";
-import { BlobBackground } from "@/components/ui/BlobBackground";
 import { WhiteLogos } from "@/components/proof/WhiteLogos";
 import { TestimonialCards } from "@/components/proof/TestimonialCards";
 import { DataProviders } from "@/components/proof/DataProviders";
@@ -16,6 +15,7 @@ import { FloatingDashboardUI } from "./demo/FloatingDashboardUI";
 import { CampaignDashboard } from "./demo/CampaignDashboard";
 import WebsitesDemo from "./demo/WebsitesDemo";
 import Image from "next/image";
+import { OrderingFlow } from "./features/OrderingFlow";
 
 export const metadata: Metadata = {
 	title: "For Advertisers: Get Quality Backlinks - Bigposting",
@@ -24,8 +24,6 @@ export const metadata: Metadata = {
 	keywords:
 		"buy guest posts, quality backlinks, guest posting service, SEO backlinks, link building",
 };
-
-const websiteNumber = 6246;
 
 export default function AdvertisersPage() {
 	return (
@@ -128,7 +126,7 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* ZIGZAG 2: PROCESS SECTION */}
-			<section className="my-20 bg-[#FB923C]/40 relative overflow-hidden">
+			<section className="relative my-20 bg-brand-orange/20 overflow-hidden">
 
 				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
 					<path fill="#FFFFFF" d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z"></path>
@@ -139,7 +137,6 @@ export default function AdvertisersPage() {
 
 						<div className="space-y-10 mt-0 lg:-mt-[25vh]">
 							<CampaignDashboard />
-							<SignUpButton />
 						</div>
 
 						<div className="flex flex-col justify-center py-10 lg:py-32">
@@ -158,15 +155,17 @@ export default function AdvertisersPage() {
 						</div>
 					</div>
 				</div>
-				
+
 				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="rotate-180">
 					<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path> 
 				</svg>
+
 			</section>
 
-
-			
-			
+			<div className="flex flex-col items-center gap-8 mx-auto -mt-62 pb-24 border">
+				<OrderingFlow />
+				<SignUpButton text="Join for Free" variant="red"/>
+			</div>			
 			{/* ESCROW PROTECTION */}
 			<section className="py-12 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -184,12 +183,11 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* TESTIMONIALS */}
-
 			<section className="pt-20 sm:mx-6 lg:mx-8 relative overflow-visible">
 				{/* Background Image - starts 66% hidden, animates up on load */}
 				<div className="relative h-[200px] -mb-[100px] overflow-visible">
 					<div
-						className="w-3/4 mx-auto h-full relative opacity-0 translate-y-[66%] animate-[slideUp_0.8s_ease-out_0.3s_forwards]"
+						className="w-3/4 mx-auto h-full relative opacity-0_ -translate-y-[20%] animate-[slideUp_0.8s_ease-out_0.3s_forwards]"
 					>
 						<Image
 							src="/screenshots/advertisers/balances-invoices.png"
@@ -203,8 +201,8 @@ export default function AdvertisersPage() {
 				</div>
 
 				{/* Dark Card with Testimonials - overlaps image */}
-				<div className="relative z-10 py-16 rounded-2xl bg-neutral-800 shadow-2xl px-4 sm:px-6 lg:px-8 overflow-hidden">
-					<h2 className="text-center pb-8 text-white text-4xl lg:text-5xl font-bold mb-4">
+				<div className="relative z-10 mx-2 py-16 rounded-2xl bg-neutral-800 shadow-2xl px-4 sm:px-6 lg:px-8 overflow-hidden">
+					<h2 className="text-center pt-6 pb-12 text-white text-4xl lg:text-5xl font-bold mb-4">
 						Trusted by SEO Professionals
 					</h2>
 
@@ -214,11 +212,11 @@ export default function AdvertisersPage() {
 
 			{/* WORKFLOW */}
 			<section className="py-24 bg-linear-to-b from-transparent via-blue-50/70 to-indigo-50 relative">
-				<h1 className="text-3xl text-center mb-12">asdasdasdas</h1>
+
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center mb-16">
+					<div className="text-center mb-16 max-w-3xl mx-auto">
 						<h2 className="text-4xl lg:text-5xl font-bold  mb-4">
-							All things Guest Posting in One Place
+							One Place for Your Whole Guest Posting Workflow
 						</h2>
 						<p className="text-xl text-gray-600 max-w-2xl mx-auto">
 							Track orders, manage campaigns, scale link building effortlessly

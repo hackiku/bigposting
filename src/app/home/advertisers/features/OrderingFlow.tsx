@@ -45,19 +45,24 @@ export function OrderingFlow() {
 		setCurrentSlide((prev) => (prev + 1) % slides.length);
 	};
 
+	const currentSlideData = slides[currentSlide];
+
+	if (!currentSlideData) return null;
+
 	return (
 		<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 			{/* Browser Mockup with Carousel */}
 			<div className="relative">
-				<BrowserMockup title={slides[currentSlide].title}>
-					{/* CRITICAL: This wrapper must have z-10 and be relative/absolute to appear above bg */}
+				<BrowserMockup title={currentSlideData.title}>
+					{/* CRITICAL: This wrapper must have z-10, absolute positioning, and explicit height */}
 					<div className="absolute inset-0 z-10 flex items-center justify-center p-4 sm:p-8">
-						<div className="relative w-full h-full max-w-[90%] max-h-[90%]">
+						{/* This inner div needs h-full + min-height for Image fill to work */}
+						<div className="relative w-full h-full max-w-[90%] max-h-[90%] min-h-[300px] sm:min-h-[400px]">
 							<Image
-								src={slides[currentSlide].image}
-								alt={slides[currentSlide].title}
+								src={currentSlideData.image}
+								alt={currentSlideData.title}
 								fill
-								className="object-contain drop-shadow-2xl"
+								className="object-contain drop-shadow-2xl pointer-events-none"
 								sizes="(max-width: 768px) 90vw, (max-width: 1200px) 70vw, 1000px"
 								priority={currentSlide === 0}
 							/>
@@ -90,7 +95,7 @@ export function OrderingFlow() {
 			{/* Slide Description */}
 			<div className="text-center mt-8">
 				<p className="text-lg text-gray-700 max-w-2xl mx-auto">
-					{slides[currentSlide].description}
+					{currentSlideData.description}
 				</p>
 			</div>
 

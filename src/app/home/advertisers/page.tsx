@@ -29,9 +29,10 @@ export default function AdvertisersPage() {
 	return (
 		<main className="bg-background">
 			{/* HERO */}
-			<section className="relative py-12 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden isolate">
+			<section className="relative py-12 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8 
+				overflow-hidden isolate bg-linear-to-br from-blue-50 to-indigo-50">
 				
-				<div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 -z-10" />
+				{/* <div className="absolute inset-0 bg-linear-to-br from-blue-50 to-indigo-50 -z-10" /> */}
 
 				{/* <div className="absolute bottom-6 right-[8%] z-0">
 					<StatSticker
@@ -50,7 +51,7 @@ export default function AdvertisersPage() {
 					/>
 				</div> */}
 
-				<div className="relative z-10 max-w-3xl mx-auto text-center">
+				<div className="relative pb-24 z-10 max-w-3xl mx-auto text-center">
 					<h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6">
 						Keep your Backlinks Flowing <span className="text-blue-600">Fresh + Fast</span>
 					</h1>
@@ -64,7 +65,7 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* DEMO TABLE */}
-			<section className="relative mx-2 sm:mx-6 lg:mx-8 z-20">
+			<section className="-mt-24 relative mx-2 sm:mx-6 lg:mx-8 z-20">
 				<div className="relative rounded-2xl bg-neutral-800 shadow-2xl pt-8 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
 					<div className="relative z-0">
 						<WebsitesDemo />
@@ -132,7 +133,7 @@ export default function AdvertisersPage() {
 					<path fill="#FFFFFF" d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z"></path>
 				</svg>
 
-				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-24">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 
 						<div className="space-y-10 mt-0 lg:-mt-[25vh]">
@@ -164,7 +165,7 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* ORDERING FLOW - positioned to overlap with wave above */}
-			<section className="relative -mt-44 pb-24 _bg-white">
+			<section className="relative -mt-80 pb-24 _bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="flex flex-col items-center gap-8">
 						<OrderingFlow />

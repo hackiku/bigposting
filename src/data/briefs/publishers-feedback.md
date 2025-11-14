@@ -35,7 +35,6 @@ Text should be “List your website for Free” (fix grammar).
 Replace orange/golden buttons with a modern, clean color — consider Bigposting green (#7BE65A) or a gradient (green/blue).
 
 
-
 Use rounded buttons, subtle shadow, and hover animation.
 
 Visual:
@@ -52,8 +51,6 @@ Remove fake metrics like “6,000+ websites” or “$2M earned” — these are
 Replace the 4 placeholder logos with new generic/fake logos (simple flat SVGs or realistic dummy logos) that still fit visually.
 
 Add a short subtext like:
-
-
 
 “Trusted by website owners across home, tech, business, and lifestyle niches.”
 
@@ -96,19 +93,11 @@ Replace generic bullets with benefit-focused points:
 
 Earn up to 91% of each sale (only 9% platform fee).
 
-
-
 Verified sites appear higher in search results.
-
-
 
 Fast payouts via PayPal.
 
-
-
 No negotiation, no spam — only verified advertisers.
-
-
 
 Add small icons for visual clarity.
 

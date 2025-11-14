@@ -4,14 +4,15 @@ interface StatStickerProps {
 	number: string;
 	label: string;
 	rotation?: number;
-	color?: "blue" | "green" | "purple" | "orange";
+	color?: "red" | "blue" | "green" | "purple" | "orange";
 }
 
 const colorStyles = {
+	red: "#FD4653",
 	blue: "#2563eb",      // Bright modern blue
-	green: "#059669",     // Teal-ish green (like Stripe)
+	green: "#01C9AA",     // Teal-ish green (like Stripe)
 	purple: "#9333ea",    // Vibrant purple
-	orange: "#ea580c",    // Hot orange
+	orange: "#FC7B61",    // Hot orange
 };
 
 export function StatSticker({

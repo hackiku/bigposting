@@ -17,6 +17,9 @@ import RotatingText from "./content/RotatingText";
 import { VerificationBadge } from "./demo/VerificationBadge";
 import { FiCheckCircle } from "react-icons/fi";
 import { StatsBar } from "./content/StatsBar";
+import { ShortTestimonial } from "@/components/proof/ShortTestimonial";
+import { TrustpilotBar } from "@/components/proof/TrustpilotBar";
+import { ProcessSteps } from "./content/ProcessSteps";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -33,7 +36,7 @@ export default function PublishersPage() {
 			{/* HERO */}
 			<section className="relative py-12 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8 
 				bg-linear-to-br from-green-100 to-emerald-100/80 overflow-hidden isolate">
-				
+
 				{/* <div className="absolute bottom-6 right-[8%] z-0">
 					<StatSticker
 						number="24hrs"
@@ -56,7 +59,7 @@ export default function PublishersPage() {
 						Monetize your <RotatingText /> with{" "}
 						<span className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-green-300 to-emerald-300 rounded-full">
 							{/* <VerificationBadge isVerified={true} size="md" /> */}
-							<FiCheckCircle className="text-white bg-emerald-400 rounded-full p-2 w-10 h-10"/>
+							<FiCheckCircle className="text-white bg-emerald-400 rounded-full p-2 w-10 h-10" />
 							<span className="text-4xl lg:text-5xl">Verified</span>
 						</span>{" "}
 						Guest Posts
@@ -71,7 +74,7 @@ export default function PublishersPage() {
 					</div>
 				</div>
 			</section>
-			
+
 
 			{/* DEMO TABLE */}
 			<section className="relative -mt-24 mx-2 sm:mx-6 lg:mx-8 z-20">
@@ -90,105 +93,111 @@ export default function PublishersPage() {
 						<div className="pointer-events-auto">
 							<WhiteLogos count={4} opacity={0.4} brightness={1.5} />
 						</div>
-					<a
-						href="/auth/signup"
-						className="pointer-events-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
+						<a
+							href="/auth/signup"
+							className="pointer-events-auto px-8 py-3 bg-primary text-black font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:shadow-xl hover:scale-105"
 						>
-						Join as Publisher
-						{/* <span className="text-green-700/60 font-medium italic ml-2">— FREE</span> */}
-					</a>
-				</div>
-			</div>
-		</section>
-
-	{/* ZIGZAG 1: START EARNING */ }
-	<section className="mt-20 relative overflow-hidden">
-		{/* Purple blob background */}
-		<div className="absolute bottom-0 left-0 w-full h-full pointer-events-none opacity-20">
-			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 left-0 w-1/2 h-1/2">
-				<path fill="#9333ea" d="M50.8,-63.7C64.7,-59.9,73.9,-43.4,77,-26.7C80.1,-10,77.1,7.1,67.5,17.4C57.9,27.8,41.8,31.5,29.4,34C17.1,36.4,8.5,37.6,-2,40.4C-12.6,43.2,-25.2,47.6,-37.4,45.1C-49.6,42.6,-61.3,33.2,-61.8,22.3C-62.4,11.4,-51.7,-1,-48.5,-17.3C-45.2,-33.5,-49.5,-53.8,-42.7,-59.8C-35.8,-65.9,-17.9,-57.7,0.3,-58.1C18.5,-58.5,37,-67.4,50.8,-63.7Z" transform="translate(100 100)" />
-			</svg>
-		</div>
-
-		<div className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-			<div className="grid lg:grid-cols-2 gap-12 items-center">
-				<div>
-					<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-						Start Earning in 24 Hours
-					</h2>
-					<p className="text-2xl leading-relaxed text-gray-600 mb-8">
-						List your site, set prices, get verified. Our fast approval process means you can start receiving orders tomorrow.
-					</p>
-					
-				</div>
-				<DashboardMockup />
-			</div>			
-		</div>
-
-	</section>
-		
-
-		
-	{/* <StatsBar /> */}
-
-	{/* ZIGZAG 2: ESCROW */ }
-	<section className="my-20 bg-linear-to-br from-blue-100/40 to-cyan-100/40 relative overflow-hidden">
-		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-			<path fill="#FFFFFF" d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z"></path>
-		</svg>
-
-		<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-			<div className="grid lg:grid-cols-2 gap-12 items-center">
-				<div className="flex flex-col gap-8 items-center mt-0 lg:-mt-[20vh]">
-					<EscrowFlow />
-					<SignUpButton text="Start Earning Today" />
-				</div>
-
-				<div className="flex flex-col justify-center py-10 lg:py-32">
-					<div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-lg font-semibold mb-4 w-fit">
-						Escrow Service
+							Join as Publisher
+							{/* <span className="text-green-700/60 font-medium italic ml-2">— FREE</span> */}
+						</a>
 					</div>
-					<h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-						✅ Published 
-						<span className="block mt-4">✅ Paid</span>
-					</h2>
-
-					<p className="text-2xl leading-relaxed text-gray-600 mb-8">
-						Advertisers's funds are held securely until you publish. No chargebacks, no disputes. You get paid immediately after you publish.
-					</p>
-					<ul className="space-y-4">
-						<li className="flex items-start gap-3">
-							<svg className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span className="text-lg text-gray-700">Payments protected by escrow</span>
-						</li>
-						<li className="flex items-start gap-3">
-							<svg className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span className="text-lg text-gray-700">Withdraw instantly to PayPal or bank</span>
-						</li>
-						<li className="flex items-start gap-3">
-							<svg className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-							</svg>
-							<span className="text-lg text-gray-700">Low fees, transparent pricing</span>
-						</li>
-					</ul>
 				</div>
-			
-			</div>
-		</div>
+			</section>
 
-		<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="rotate-180">
-			<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
-		</svg>
-	</section>
+			{/* ZIGZAG 1: START EARNING */}
+			<section className="mt-24 relative overflow-hidden">
+				{/* Purple blob background */}
+				<div className="absolute bottom-0 left-0 w-full h-full pointer-events-none opacity-20">
+					<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute bottom-0 left-0 w-1/2 h-1/2">
+						<path fill="#9333ea" d="M50.8,-63.7C64.7,-59.9,73.9,-43.4,77,-26.7C80.1,-10,77.1,7.1,67.5,17.4C57.9,27.8,41.8,31.5,29.4,34C17.1,36.4,8.5,37.6,-2,40.4C-12.6,43.2,-25.2,47.6,-37.4,45.1C-49.6,42.6,-61.3,33.2,-61.8,22.3C-62.4,11.4,-51.7,-1,-48.5,-17.3C-45.2,-33.5,-49.5,-53.8,-42.7,-59.8C-35.8,-65.9,-17.9,-57.7,0.3,-58.1C18.5,-58.5,37,-67.4,50.8,-63.7Z" transform="translate(100 100)" />
+					</svg>
+				</div>
+
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div className="grid lg:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+								Start Earning in 24 Hours
+							</h2>
+							<p className="text-2xl leading-relaxed text-gray-600 mb-8">
+								List your site, set prices, get verified. Our fast approval process means you can start receiving orders tomorrow.
+							</p>
+						</div>
+						<DashboardMockup />
+					</div>
+
+					{/* Testimonial - centered below grid */}
+					<ShortTestimonial
+						quote="I really like your way of working specially your payment procedure. With other portals and SEO Agencies I wait for payments twice in a month after link goes live."
+						name="Braddy C."
+						role="Lifestyle Blogger"
+						avatar="/avatars/braddy-cost.jpg"
+					/>
+					{/* Trustpilot bar */}
+					<TrustpilotBar />
+				</div>
+			</section>
+
+			{/* <StatsBar /> */}
+
+			<ProcessSteps />
+
+			{/* ZIGZAG 2: ESCROW */}
+			<section className="bg-linear-to-br from-blue-100/40 to-cyan-100/40 relative overflow-hidden">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path fill="#FFFFFF" d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z"></path>
+				</svg>
+
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<div className="grid lg:grid-cols-2 gap-12 items-center">
+						<div className="flex flex-col gap-8 items-center mt-0 lg:-mt-[20vh]">
+							<EscrowFlow />
+							<SignUpButton text="Start Earning Today" />
+						</div>
+
+						<div className="flex flex-col justify-center py-10 lg:py-32">
+							<div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-lg font-semibold mb-4 w-fit">
+								Escrow Service
+							</div>
+							<h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+								✅ Published
+								<span className="block mt-4">✅ Paid</span>
+							</h2>
+
+							<p className="text-2xl leading-relaxed text-gray-600 mb-8">
+								Advertisers's funds are held securely until you publish. No chargebacks, no disputes. You get paid immediately after you publish.
+							</p>
+							<ul className="space-y-4">
+								<li className="flex items-start gap-3">
+									<svg className="w-6 h-6 text-blue-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+									</svg>
+									<span className="text-lg text-gray-700">Payments protected by escrow</span>
+								</li>
+								<li className="flex items-start gap-3">
+									<svg className="w-6 h-6 text-blue-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+									</svg>
+									<span className="text-lg text-gray-700">Withdraw instantly to PayPal or bank</span>
+								</li>
+								<li className="flex items-start gap-3">
+									<svg className="w-6 h-6 text-blue-500 shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+									</svg>
+									<span className="text-lg text-gray-700">Low fees, transparent pricing</span>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="rotate-180">
+					<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+				</svg>
+			</section>
 
 			<div className="flex gap-8 mt-20 w-full mx-auto">
-
-	
 				<StatSticker
 					number="$↑↓"
 					label="Pricing Control"
@@ -203,65 +212,65 @@ export default function PublishersPage() {
 				/>
 			</div>
 
-	{/* BENEFITS */ }
-	<section className="pb-20 bg-white">
-		<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div className="mx-auto max-w-2xl text-center mb-16">
-				<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-					Why 1000s of Publishers Choose BigPosting
-				</h2>
-				<p className="text-2xl text-gray-600 max-w-2xl mx-auto">
-					The easiest way to monetize your website with guest posts and link insertions
-				</p>
-			</div>
-			<PublisherBenefits />
-		</div>
-	</section>
-
-	{/* PRICING */ }
-	<section id="pricing" className="py-24 bg-gray-50 relative overflow-hidden">
-		{/* Green blob background */}
-		<div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-15">
-			<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 right-0 w-1/3 h-1/3">
-				<path fill="#059669" d="M50.8,-63.7C64.7,-59.9,73.9,-43.4,77,-26.7C80.1,-10,77.1,7.1,67.5,17.4C57.9,27.8,41.8,31.5,29.4,34C17.1,36.4,8.5,37.6,-2,40.4C-12.6,43.2,-25.2,47.6,-37.4,45.1C-49.6,42.6,-61.3,33.2,-61.8,22.3C-62.4,11.4,-51.7,-1,-48.5,-17.3C-45.2,-33.5,-49.5,-53.8,-42.7,-59.8C-35.8,-65.9,-17.9,-57.7,0.3,-58.1C18.5,-58.5,37,-67.4,50.8,-63.7Z" transform="translate(100 100)" />
-			</svg>
-		</div>
-
-		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-			<PublishersPricing />
-		</div>
-	</section>
-
-
-	<div className="max-w-5xl mx-auto">
-		<TestimonialCards />
-	</div>
-
-	{/* FINAL CTA */ }
-	<section className="py-20 bg-linear-to-b from-transparent via-blue-50/80 to-indigo-50 rounded-b-3xl relative">
-		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div className="mt-20 relative rounded-2xl bg-linear-to-br from-emerald-500 to-brand-green shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-				<div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl mx-auto text-center">
-					<WhiteLogos count={4} opacity={0.6} brightness={1.8} />
-
-					<div>
-						<h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-							Ready to Start Earning?
+			{/* BENEFITS */}
+			<section className="pb-20 bg-white">
+				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-16">
+						<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+							Why 1000s of Publishers Choose BigPosting
 						</h2>
-						<p className="text-xl text-green-100">
-							List your website free. No credit card required. Start receiving orders in 24 hours.
+						<p className="text-2xl text-gray-600 max-w-2xl mx-auto">
+							The easiest way to monetize your website with guest posts and link insertions
 						</p>
 					</div>
-
-					<SignUpButton text="List Your Website Free" variant="orange"/>
-
-					<p className="text-white/70 text-sm mt-2">
-						Free to list • Only pay when you earn • Withdraw anytime
-					</p>
+					<PublisherBenefits />
 				</div>
+			</section>
+
+			{/* PRICING */}
+			<section id="pricing" className="py-24 bg-gray-50 relative overflow-hidden">
+				{/* Green blob background */}
+				<div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-15">
+					<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 right-0 w-1/3 h-1/3">
+						<path fill="#059669" d="M50.8,-63.7C64.7,-59.9,73.9,-43.4,77,-26.7C80.1,-10,77.1,7.1,67.5,17.4C57.9,27.8,41.8,31.5,29.4,34C17.1,36.4,8.5,37.6,-2,40.4C-12.6,43.2,-25.2,47.6,-37.4,45.1C-49.6,42.6,-61.3,33.2,-61.8,22.3C-62.4,11.4,-51.7,-1,-48.5,-17.3C-45.2,-33.5,-49.5,-53.8,-42.7,-59.8C-35.8,-65.9,-17.9,-57.7,0.3,-58.1C18.5,-58.5,37,-67.4,50.8,-63.7Z" transform="translate(100 100)" />
+					</svg>
+				</div>
+
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+					<PublishersPricing />
+				</div>
+			</section>
+
+
+			<div className="max-w-5xl mx-auto">
+				<TestimonialCards />
 			</div>
-		</div>
-	</section>
+
+			{/* FINAL CTA */}
+			<section className="py-20 bg-linear-to-b from-transparent via-blue-50/80 to-indigo-50 rounded-b-3xl relative">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="mt-20 relative rounded-2xl bg-linear-to-br from-emerald-500 to-brand-green shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+						<div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl mx-auto text-center">
+							<WhiteLogos count={4} opacity={0.6} brightness={1.8} />
+
+							<div>
+								<h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+									Ready to Start Earning?
+								</h2>
+								<p className="text-xl text-green-100">
+									List your website free. No credit card required. Start receiving orders in 24 hours.
+								</p>
+							</div>
+
+							<SignUpButton text="List Your Website Free" variant="orange" />
+
+							<p className="text-white/70 text-sm mt-2">
+								Free to list • Only pay when you earn • Withdraw anytime
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 		</main >
 	);
 }

@@ -8,7 +8,7 @@ export function PublishersPricing() {
 	return (
 		<div className="flex flex-col gap-8 bg-neutral-800 rounded-2xl p-8 lg:p-12">
 			<h2 className="text-4xl lg:text-5xl font-bold text-white text-center my-6">
-				How Much Can You Earn?
+				See How Much You Can Earn
 			</h2>
 
 			<div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -43,7 +43,7 @@ export function PublishersPricing() {
 							{tier.features.map((feature, i) => (
 								<li key={i} className="flex items-center gap-2 text-base text-gray-700">
 									<svg
-										className="w-5 h-5 text-green-500 flex-shrink-0"
+										className="w-5 h-5 text-green-500 shrink-0"
 										fill="none"
 										stroke="currentColor"
 										viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ export function PublishersPricing() {
 				<WhiteLogos count={4} opacity={0.4} brightness={1.5} />
 
 				<div className="flex flex-col items-center gap-4">
-					<SignUpButton text="List Your Website Free" />
+					<SignUpButton text="List Your Website Free" variant="green"/>
 					<p className="text-white/70 text-sm text-center">
 						Free to list • Only pay when you earn • Withdraw anytime
 					</p>

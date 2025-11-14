@@ -23,7 +23,7 @@ export function PublisherRequirements() {
 	return (
 		<div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 			{/* Minimum Requirements */}
-			<div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200">
+			<div className="bg-linear-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border-2 border-green-200">
 				<div className="flex items-center gap-3 mb-6">
 					<div className="w-10 h-10 rounded-full bg-brand-green flex items-center justify-center">
 						<FiCheck className="w-6 h-6 text-white" />

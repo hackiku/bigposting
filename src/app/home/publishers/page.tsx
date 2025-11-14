@@ -198,7 +198,7 @@ export default function PublishersPage() {
 
 					{/* CTA Button - Centered */}
 					<div className="flex justify-center mt-12">
-						<SignUpButton text="Start Earning Today" variant="green" />
+						<SignUpButton text="Start Earning Today" variant="orange" />
 					</div>
 
 					<p className="mx-auto max-w-lg mt-6 text-md text-green-600 font-medium">
@@ -227,7 +227,11 @@ export default function PublishersPage() {
 			</section>
 
 			{/* REQUIREMENTS */}
-			<section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+			<section className="pb-36 bg-linear-to-br from-gray-50 via-gray-100 to-transparent">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="rotate-0">
+					<path fill="#FFFFFF" d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+				</svg>
+
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
 						<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -239,11 +243,12 @@ export default function PublishersPage() {
 					</div>
 					<PublisherRequirements />
 				</div>
+				
 			</section>
 
 
 			{/* PRICING */}
-			<section id="pricing" className="py-24 bg-gray-50 relative overflow-hidden">
+			<section id="pricing" className="pb-24 -mt-20 _bg-white relative overflow-hidden">
 				{/* Green blob background */}
 				<div className="absolute top-0 right-0 w-full h-full pointer-events-none opacity-15">
 					<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="absolute top-0 right-0 w-1/3 h-1/3">

@@ -120,7 +120,7 @@ export default function PublishersPage() {
 								Start Earning in 24 Hours
 							</h2>
 							<p className="text-2xl leading-relaxed text-gray-600 mb-8">
-								List your site, set prices, get verified. Our fast approval process means you can start receiving orders tomorrow.
+								List your site, set prices, get verified. Our fast approval process means you can start receiving orders tomorrow, from advertisers that live & breathe your niche.
 							</p>
 						</div>
 						<DashboardMockup />
@@ -140,7 +140,7 @@ export default function PublishersPage() {
 
 			{/* <StatsBar /> */}
 
-			<ProcessSteps />
+			
 
 			{/* ZIGZAG 2: ESCROW */}
 			<section className="bg-linear-to-br from-blue-100/40 to-cyan-100/40 relative overflow-hidden">
@@ -152,7 +152,6 @@ export default function PublishersPage() {
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div className="flex flex-col gap-8 items-center mt-0 lg:-mt-[20vh]">
 							<EscrowFlow />
-							<SignUpButton text="Start Earning Today" />
 						</div>
 
 						<div className="flex flex-col justify-center py-10 lg:py-32">
@@ -188,8 +187,22 @@ export default function PublishersPage() {
 								</li>
 							</ul>
 						</div>
-
 					</div>
+				</div>
+
+
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-20">
+					{/* Process Steps Carousel */}
+					<ProcessSteps />
+
+					{/* CTA Button - Centered */}
+					<div className="flex justify-center mt-12">
+						<SignUpButton text="Start Earning Today" variant="green" />
+					</div>
+
+					<p className="mx-auto max-w-lg mt-6 text-md text-green-600 font-medium">
+						💡 Verified websites get priority in search results and faster approval
+					</p>
 				</div>
 
 				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="rotate-180">
@@ -197,23 +210,8 @@ export default function PublishersPage() {
 				</svg>
 			</section>
 
-			<div className="flex gap-8 mt-20 w-full mx-auto">
-				<StatSticker
-					number="$↑↓"
-					label="Pricing Control"
-					rotation={3}
-					color="blue"
-				/>
-				<StatSticker
-					number="Fast"
-					label="Payouts"
-					rotation={-8}
-					color="orange"
-				/>
-			</div>
-
 			{/* BENEFITS */}
-			<section className="pb-20 bg-white">
+			<section className="py-20 bg-white">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center mb-16">
 						<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">

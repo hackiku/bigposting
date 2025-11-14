@@ -11,6 +11,8 @@ export default function RotatingText() {
 
 	useEffect(() => {
 		const currentWord = words[index];
+		if (!currentWord) return; // Guard clause for TypeScript
+
 		const typingSpeed = isDeleting ? 50 : 100;
 
 		const timeout = setTimeout(() => {
@@ -37,6 +39,8 @@ export default function RotatingText() {
 		return () => clearTimeout(timeout);
 	}, [displayText, isDeleting, index, words]);
 
+	const currentWord = words[index];
+
 	return (
 		<span className="relative inline-block min-w-[240px] text-brand-orange">
 			{displayText}
@@ -56,7 +60,7 @@ export default function RotatingText() {
 					className="text-brand-orange opacity-40"
 					style={{
 						strokeDasharray: 240,
-						strokeDashoffset: displayText.length === words[index].length ? 0 : 240,
+						strokeDashoffset: currentWord && displayText.length === currentWord.length ? 0 : 240,
 						transition: 'stroke-dashoffset 0.8s ease-out'
 					}}
 				/>

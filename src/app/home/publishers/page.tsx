@@ -20,6 +20,7 @@ import { StatsBar } from "./content/StatsBar";
 import { ShortTestimonial } from "@/components/proof/ShortTestimonial";
 import { TrustpilotBar } from "@/components/proof/TrustpilotBar";
 import { ProcessSteps } from "./content/ProcessSteps";
+import { PublisherRequirements } from "./content/PublishersRequirements";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -224,6 +225,22 @@ export default function PublishersPage() {
 					<PublisherBenefits />
 				</div>
 			</section>
+
+			{/* REQUIREMENTS */}
+			<section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center mb-16">
+						<h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+							Publisher Requirements
+						</h2>
+						<p className="text-xl text-gray-600 max-w-2xl mx-auto">
+							Make sure your website meets our quality standards
+						</p>
+					</div>
+					<PublisherRequirements />
+				</div>
+			</section>
+
 
 			{/* PRICING */}
 			<section id="pricing" className="py-24 bg-gray-50 relative overflow-hidden">

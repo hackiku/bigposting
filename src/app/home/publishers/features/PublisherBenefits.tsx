@@ -1,42 +1,49 @@
-// src/app/home/publishers/content/PublisherBenefits.tsx
+// src/app/home/publishers/features/PublisherBenefits.tsx
 
-import { FiCheckCircle, FiDollarSign, FiZap, FiShield, FiTrendingUp, FiClock } from "react-icons/fi";
+import Image from "next/image";
+import { FiDollarSign, FiZap, FiShield, FiTrendingUp, FiCheckCircle, FiUsers } from "react-icons/fi";
 
 const benefits = [
 	{
-		icon: FiZap,
-		title: "Quick Approval",
-		description: "Get verified in 24-48 hours and start receiving orders immediately.",
-		color: "from-yellow-400 to-orange-500",
+		icon: FiDollarSign,
+		title: "Earn Up to 91%",
+		description: "Keep 91% of each sale with only 9% platform fee. No hidden charges.",
+		image: "/images/benefits/earnings.png",
+		color: "from-green-400 to-emerald-500",
 	},
 	{
-		icon: FiDollarSign,
-		title: "Set Your Rates",
-		description: "Full control over pricing for guest posts and link insertions.",
-		color: "from-green-400 to-emerald-500",
+		icon: FiTrendingUp,
+		title: "Higher Search Rankings",
+		description: "Verified sites appear at the top of search results for maximum visibility.",
+		image: "/images/benefits/visibility.png",
+		color: "from-purple-400 to-pink-500",
+	},
+	{
+		icon: FiZap,
+		title: "Fast Payouts",
+		description: "Instant withdrawals to PayPal or bank account. No waiting periods.",
+		image: "/images/benefits/payouts.png",
+		color: "from-cyan-400 to-blue-500",
+	},
+	{
+		icon: FiUsers,
+		title: "Verified Advertisers Only",
+		description: "No negotiation, no spam. Only work with verified, quality advertisers.",
+		image: "/images/benefits/advertisers.png",
+		color: "from-blue-400 to-indigo-500",
 	},
 	{
 		icon: FiShield,
 		title: "Escrow Protection",
-		description: "Funds held securely until content is published. No chargebacks.",
-		color: "from-blue-400 to-indigo-500",
-	},
-	{
-		icon: FiTrendingUp,
-		title: "Instant Visibility",
-		description: "Get featured to thousands of active advertisers searching for sites.",
-		color: "from-purple-400 to-pink-500",
-	},
-	{
-		icon: FiClock,
-		title: "Fast Payments",
-		description: "Withdraw earnings anytime to PayPal or bank account in minutes.",
-		color: "from-cyan-400 to-blue-500",
+		description: "Payments held securely until you publish. Zero chargeback risk.",
+		image: "/images/benefits/escrow.png",
+		color: "from-orange-400 to-red-500",
 	},
 	{
 		icon: FiCheckCircle,
-		title: "Verification Badge",
-		description: "Boost credibility and get more orders with our verification system.",
+		title: "24-48 Hour Approval",
+		description: "Quick verification process gets you earning within 2 days.",
+		image: "/images/benefits/approval.png",
 		color: "from-green-400 to-teal-500",
 	},
 ];
@@ -49,17 +56,34 @@ export function PublisherBenefits() {
 				return (
 					<div
 						key={benefit.title}
-						className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
+						className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group"
 					>
-						<div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${benefit.color} mb-4`}>
-							<Icon className="w-7 h-7 text-white" />
+						{/* Image top */}
+						<div className="relative h-48 w-full overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+							<Image
+								src={benefit.image}
+								alt={benefit.title}
+								fill
+								className="object-cover transition-transform duration-300 group-hover:scale-105"
+							/>
+							{/* Gradient overlay */}
+							<div className={`absolute inset-0 bg-gradient-to-br ${benefit.color} opacity-20 group-hover:opacity-30 transition-opacity`} />
 						</div>
-						<h3 className="text-xl font-bold text-gray-900 mb-3">
-							{benefit.title}
-						</h3>
-						<p className="text-gray-600 leading-relaxed">
-							{benefit.description}
-						</p>
+
+						{/* Content */}
+						<div className="p-6">
+							<div className="flex items-center gap-3 mb-3">
+								<div className={`inline-flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br ${benefit.color}`}>
+									<Icon className="w-5 h-5 text-white" />
+								</div>
+								<h3 className="text-xl font-bold text-gray-900">
+									{benefit.title}
+								</h3>
+							</div>
+							<p className="text-gray-600 leading-relaxed">
+								{benefit.description}
+							</p>
+						</div>
 					</div>
 				);
 			})}

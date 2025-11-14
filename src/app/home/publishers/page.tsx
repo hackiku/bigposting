@@ -7,12 +7,15 @@ import { WhiteLogos } from "@/components/proof/WhiteLogos";
 import { TestimonialCards } from "@/components/proof/TestimonialCards";
 import { StatSticker } from "@/components/ui/StatSticker";
 // content
-import { PublisherBenefits } from "./content/PublisherBenefits";
+import { PublisherBenefits } from "./features/PublisherBenefits";
 import { EscrowFlow } from "./content/EscrowFlow";
 import { PublishersPricing } from "./content/PublishersPricing";
 // demo
 import { DashboardMockup } from "./demo/DashboardMockup";
 import { DemoTable } from "./demo/DemoTable";
+import RotatingText from "./content/RotatingText";
+import { VerificationBadge } from "./demo/VerificationBadge";
+import { FiCheckCircle } from "react-icons/fi";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -22,45 +25,55 @@ export const metadata: Metadata = {
 		"sell guest posts, monetize website, publisher marketplace, list your site, earn from backlinks, verification badge",
 };
 
+
 export default function PublishersPage() {
 	return (
 		<main className="bg-background">
 			{/* HERO */}
-			<section className="relative py-12 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden isolate">
-				<div className="absolute inset-0 bg-linear-to-br from-green-50 to-emerald-50 -z-10" />
-
-				<div className="absolute bottom-6 right-[8%] z-0">
+			<section className="relative py-12 lg:py-20 mx-auto px-4 sm:px-6 lg:px-8 
+				bg-linear-to-br from-green-100 to-emerald-100/80 overflow-hidden isolate">
+				
+				{/* <div className="absolute bottom-6 right-[8%] z-0">
 					<StatSticker
-						number="$2M+"
-						label="Paid Out"
+						number="24hrs"
+						label="First Orders"
 						rotation={8}
 						color="green"
 					/>
 				</div>
 				<div className="absolute bottom-12 left-[12%] z-0">
 					<StatSticker
-						number="6,000+"
-						label="Active Publishers"
+						number="91%"
+						label="You Keep"
 						rotation={-10}
 						color="blue"
 					/>
-				</div>
+				</div> */}
 
-				<div className="relative pb-[10vh] md:pb-5 z-10 max-w-3xl mx-auto text-center">
-					<h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
-						Earn <span className="text-green-600">+$$</span> from Guest Posts on your Site
+				<div className="relative pb-24 z-10 max-w-4xl mx-auto text-center">
+					<h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+						Monetize your <RotatingText /> with{" "}
+						<span className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-green-300 to-emerald-300 rounded-full">
+							{/* <VerificationBadge isVerified={true} size="md" /> */}
+							<FiCheckCircle className="text-white bg-emerald-400 rounded-full p-2 w-10 h-10"/>
+							<span className="text-4xl lg:text-5xl">Verified</span>
+						</span>{" "}
+						Guest Posts
 					</h1>
+
 					<p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-						List your website, set prices, get verified. See orders pour in within 24 hours.
+						List your site, set your price, receive verified guest post orders protected by payments escrow.
 					</p>
+
 					<div className="flex justify-center">
-						<SignUpButton text="List Your Website Free" variant="orange"/>
+						<SignUpButton text="List Your Website Free" variant="orange" />
 					</div>
 				</div>
 			</section>
+			
 
 			{/* DEMO TABLE */}
-			<section className="relative mx-2 sm:mx-6 lg:mx-8 z-20">
+			<section className="relative -mt-24 mx-2 sm:mx-6 lg:mx-8 z-20">
 				<div className="relative rounded-2xl bg-neutral-800 shadow-2xl pt-8 pb-8 px-4 sm:px-6 lg:px-8 overflow-hidden">
 					<div className="relative z-0">
 						<DemoTable />

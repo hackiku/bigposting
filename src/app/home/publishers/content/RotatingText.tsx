@@ -38,7 +38,7 @@ export default function RotatingText() {
 	}, [displayText, isDeleting, index, words]);
 
 	return (
-		<span className="relative inline-block min-w-[240px] text-brand-green">
+		<span className="relative inline-block min-w-[240px] text-brand-orange">
 			{displayText}
 			<span className="animate-pulse">|</span>
 			{/* Animated underline swoosh */}
@@ -51,9 +51,9 @@ export default function RotatingText() {
 				<path
 					d="M2 10C50 2, 100 2, 150 6C180 8, 210 10, 238 8"
 					stroke="currentColor"
-					strokeWidth="3"
+					strokeWidth="5"
 					strokeLinecap="round"
-					className="text-brand-green opacity-40"
+					className="text-brand-orange opacity-40"
 					style={{
 						strokeDasharray: 240,
 						strokeDashoffset: displayText.length === words[index].length ? 0 : 240,

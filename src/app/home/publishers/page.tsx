@@ -16,6 +16,7 @@ import { DemoTable } from "./demo/DemoTable";
 import RotatingText from "./content/RotatingText";
 import { VerificationBadge } from "./demo/VerificationBadge";
 import { FiCheckCircle } from "react-icons/fi";
+import { StatsBar } from "./content/StatsBar";
 
 export const metadata: Metadata = {
 	title: "For Publishers: Sell Guest Posts & Earn - Bigposting",
@@ -118,36 +119,17 @@ export default function PublishersPage() {
 					<p className="text-2xl leading-relaxed text-gray-600 mb-8">
 						List your site, set prices, get verified. Our fast approval process means you can start receiving orders tomorrow.
 					</p>
-					<div className="flex gap-8 mt-20 w-full mx-auto">
-
-							<StatSticker
-								number="24h"
-								label="Website Approval"
-								rotation={-5}
-								color="green"
-							/>
-							<StatSticker
-								number="$↑↓"
-								label="Pricing Control"
-								rotation={3}
-								color="blue"
-							/>
-							<StatSticker
-								number="Fast"
-								label="Payouts"
-								rotation={-8}
-								color="orange"
-							/>
-					</div>
+					
 				</div>
 				<DashboardMockup />
-			</div>
-
-			
+			</div>			
 		</div>
 
-			{/* <StatsBar /> */}
 	</section>
+		
+
+		
+	{/* <StatsBar /> */}
 
 	{/* ZIGZAG 2: ESCROW */ }
 	<section className="my-20 bg-linear-to-br from-blue-100/40 to-cyan-100/40 relative overflow-hidden">
@@ -204,6 +186,23 @@ export default function PublishersPage() {
 		</svg>
 	</section>
 
+			<div className="flex gap-8 mt-20 w-full mx-auto">
+
+	
+				<StatSticker
+					number="$↑↓"
+					label="Pricing Control"
+					rotation={3}
+					color="blue"
+				/>
+				<StatSticker
+					number="Fast"
+					label="Payouts"
+					rotation={-8}
+					color="orange"
+				/>
+			</div>
+
 	{/* BENEFITS */ }
 	<section className="pb-20 bg-white">
 		<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -239,9 +238,9 @@ export default function PublishersPage() {
 	</div>
 
 	{/* FINAL CTA */ }
-	<section className="py-20 bg-linear-to-b from-transparent via-yellow-200/50 to-yellow-300/60 relative">
+	<section className="py-20 bg-linear-to-b from-transparent via-blue-50/80 to-indigo-50 rounded-b-3xl relative">
 		<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<div className="mt-20 relative rounded-2xl bg-linear-to-br from-green-600 to-emerald-600 shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+			<div className="mt-20 relative rounded-2xl bg-linear-to-br from-emerald-500 to-brand-green shadow-2xl py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
 				<div className="relative z-10 flex flex-col items-center gap-8 max-w-3xl mx-auto text-center">
 					<WhiteLogos count={4} opacity={0.6} brightness={1.8} />
 
@@ -254,7 +253,7 @@ export default function PublishersPage() {
 						</p>
 					</div>
 
-					<SignUpButton text="List Your Website Free" />
+					<SignUpButton text="List Your Website Free" variant="orange"/>
 
 					<p className="text-white/70 text-sm mt-2">
 						Free to list • Only pay when you earn • Withdraw anytime

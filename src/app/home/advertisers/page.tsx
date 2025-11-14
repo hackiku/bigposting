@@ -226,7 +226,7 @@ export default function AdvertisersPage() {
 			</section>
 
 			{/* WORKFLOW */}
-			<section className="py-24 bg-linear-to-b from-transparent via-blue-50/70 to-indigo-50 relative">
+			<section className="relative rounded-b-3xl py-24 bg-linear-to-b from-transparent via-blue-50/70 to-indigo-50 ">
 
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-16 max-w-3xl mx-auto">
